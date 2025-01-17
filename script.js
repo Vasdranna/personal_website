@@ -1,8 +1,8 @@
 /* ———————————————————————————————————————————————————————————————————————————————————— */
 /*                                     OBFUSCATE EMAIL                                  */
 /* ———————————————————————————————————————————————————————————————————————————————————— */
-const u = atob("Z2l1bGlhbm9kYW5pZWxl");
-const d = atob("eWFob28uY29t");
+const u = atob("aW5mbw==");
+const d = atob("Z2l1ZGFuLmNj");
 const a = document.querySelector(".emailLink");
 a.href = "mailto:" + u + "@" + d;
 
