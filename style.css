@@ -28,8 +28,8 @@ body {
 }
 
 .main {
-  margin-top: 24px;
-  padding: 24px;
+  margin-top: 16px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,7 +44,7 @@ body {
 /* —————————————————————————————————————— AVATAR —————————————————————————————————————— */
 
 .avatar {
-  width: 150px;
+  width: 140px;
   margin-bottom: 12px;
   /* outline: 1px dashed rgb(47, 0, 255); */
   /* background-color: rgba(227, 254, 74, 0.299); */
@@ -55,7 +55,13 @@ body {
   /* object-fit: fill; */
   border-radius: 100%;
   pointer-events: none;
+  transition: var(--animation-speed);
 }
+
+/* .avatar img:hover { */
+/* outline: 4px solid var(--fg-color); */
+/* transition: var(--animation-speed); */
+/* } */
 
 /* ——————————————————————————————————————— INFO ——————————————————————————————————————— */
 
@@ -83,7 +89,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 12px;
-  margin-block: 36px;
+  margin-block: 32px;
   width: 100%;
   max-width: 500px;
 }
@@ -106,7 +112,7 @@ a:visited {
   align-items: center;
   width: 100%;
   font-size: 1em;
-  height: 64px;
+  height: 60px;
   background-color: var(--btn-bg);
   border: none;
   padding: 24px;
