@@ -15,7 +15,8 @@ const modal = document.querySelector(".modal");
 
 // Show modal
 openModal.addEventListener("click", () => {
-  modal.style.display = "flex";
+  modal.classList.remove("modal-close");
+  modal.classList.add("modal-show");
 });
 
 // Close modal with click in close button
@@ -38,5 +39,6 @@ window.addEventListener("click", (e) => {
 });
 
 function closeModalFn() {
-  modal.style.display = "none";
+  modal.classList.remove("modal-show");
+  modal.classList.add("modal-close");
 }
