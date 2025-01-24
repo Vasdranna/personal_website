@@ -244,3 +244,37 @@ a.emailLink:hover {
     opacity: 1;
   }
 }
+
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+/*                               WORDS COMING SOON (TEMP)                               */
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+
+.item.words {
+  opacity: 0.3;
+  transition: 1s;
+
+}
+
+.item.words:hover {
+  opacity: 0.6;
+  transition: 1s;
+}
+
+.item.words::after {
+  content: "Coming soon...";
+  opacity: 0;
+  transition: 1s;
+  scale: 0.95;
+  position: absolute;
+  right: 0px;
+  font-style: italic;
+}
+
+.item.words:hover::after {
+  opacity: 0.8;
+  scale: 1;
+  right: 10px;
+  transform: translateX(-8%);
+  transition: 1s;
+}
