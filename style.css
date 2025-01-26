@@ -44,7 +44,7 @@ body {
 /* —————————————————————————————————————— AVATAR —————————————————————————————————————— */
 
 .avatar {
-  width: 150px;
+  width: 140px;
   margin-bottom: 12px;
   /* outline: 1px dashed rgb(47, 0, 255); */
   /* background-color: rgba(227, 254, 74, 0.299); */
@@ -52,19 +52,16 @@ body {
 
 .avatar img {
   width: 100%;
+  /* object-fit: fill; */
   border-radius: 100%;
+  pointer-events: none;
   transition: var(--animation-speed);
-  /* filter: saturate(0); */
 }
 
-
-.avatar img:hover {
-  scale: 0.98;
-  cursor: pointer;
-  /* filter: saturate(1.4); */
-  transition: var(--animation-speed) ease-in-out;
-}
-
+/* .avatar img:hover { */
+/* outline: 4px solid var(--fg-color); */
+/* transition: var(--animation-speed); */
+/* } */
 
 /* ——————————————————————————————————————— INFO ——————————————————————————————————————— */
 
@@ -271,8 +268,6 @@ a.emailLink:hover {
   scale: 0.95;
   position: absolute;
   right: 0px;
-  font-family: serif;
-  font-size: 0.9em;
   font-style: italic;
 }
 
