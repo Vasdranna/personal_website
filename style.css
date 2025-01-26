@@ -265,8 +265,9 @@ a.emailLink:hover {
   content: "Coming soon...";
   opacity: 0;
   transition: 1s;
-  scale: 0.95;
+  scale: 0.9;
   position: absolute;
+  font-size: 0.9em;
   right: 0px;
   font-style: italic;
 }
