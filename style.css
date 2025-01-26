@@ -52,16 +52,10 @@ body {
 
 .avatar img {
   width: 100%;
-  /* object-fit: fill; */
   border-radius: 100%;
   pointer-events: none;
   transition: var(--animation-speed);
 }
-
-/* .avatar img:hover { */
-/* outline: 4px solid var(--fg-color); */
-/* transition: var(--animation-speed); */
-/* } */
 
 /* ——————————————————————————————————————— INFO ——————————————————————————————————————— */
 
