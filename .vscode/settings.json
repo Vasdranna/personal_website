@@ -15,6 +15,7 @@
     ".vscode": true,
     "*.exe": true,
     "*.obj": true,
+    "**/.astro": true,
     "**/.filen.trash.local": true,
     "**/.vscode": true,
     "**/desktop.ini": true,
