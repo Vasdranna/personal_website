@@ -190,6 +190,8 @@ const things = [
   { name: "Sir Percival", url: "https://youtu.be/QdpUgxf8XbU", category: "music" },
   { name: "Legendary Tales", url: "https://youtu.be/oTrG2XnG5yk", category: "music" },
   { name: "Kino", url: "https://www.youtube.com/watch?v=Mo9KIpPOeqg", category: "music" },
+  { name: "Excalibur", url: "https://www.youtube.com/watch?v=6IpBFYaBb_8", category: "music" },
+  { name: "The Riddler", url: "https://www.youtube.com/watch?v=5njp0jlu72E", category: "music" },
 
   { name: "Lost", url: "https://www.imdb.com/title/tt0411008", category: "series" },
 
