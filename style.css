@@ -1,0 +1,269 @@
+:root {
+  --bg-color: #141414;
+  --fg-color: #e8dede;
+  --btn-bg: #1e1e1c;
+  --btn-bg-hover: #2d2929;
+  --subtitle-color: #726666;
+  --animation-speed: 300ms;
+}
+
+@font-face {
+  font-family: "poppins-regular";
+  src: url("../assets/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "poppins-bold";
+  src: url("../assets/Poppins-Bold.ttf");
+}
+
+*,
+*::after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  font-family: "poppins-regular";
+}
+
+body {
+  width: 100%;
+  /* overflow-y: hidden; */
+}
+
+.main {
+  margin-top: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+::selection {
+  background: var(--fg-color);
+  color: var(--btn-bg-hover);
+}
+
+/* —————————————————————————————————————— LOGO —————————————————————————————————————— */
+
+.logo {
+  width: 80px;
+  margin-bottom: 32px;
+  /* border-radius: 100%; */
+  /* outline: 2px dashed rgb(47, 0, 255); */
+  overflow: hidden;
+  /* padding: 14px; */
+  /* background-color: black; */
+}
+
+.logo svg {
+  fill: var(--fg-color);
+}
+
+/* ——————————————————————————————————————— INFO ——————————————————————————————————————— */
+
+.text {
+  text-align: center;
+}
+
+.title {
+  font-family: "poppins-bold";
+  font-size: 1.5em;
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-size: 1em;
+  color: var(--subtitle-color);
+  font-family: "poppins-regular";
+  font-weight: 600;
+}
+
+/* —————————————————————————————————————— BUTTONS ————————————————————————————————————— */
+
+.items {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  margin-block: 32px;
+  width: 100%;
+  max-width: 400px;
+}
+
+a {
+  text-decoration: initial;
+  color: var(--fg-color);
+}
+
+a:visited {
+  color: var(--fg-color);
+  fill: var(--fg-color);
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1em;
+  height: 60px;
+  background-color: var(--btn-bg);
+  border: none;
+  padding: 24px;
+  color: var(--fg-color) !important;
+  transition: scale var(--animation-speed);
+  border-radius: 12px;
+  position: relative;
+}
+
+.item:hover {
+  /* scale: 1.02; */
+  /* transition: scale var(--animation-speed); */
+  cursor: pointer;
+  background-color: var(--btn-bg-hover);
+  /* outline: 1px solid var(--fg-color); */
+}
+
+.item svg {
+  position: absolute;
+  width: 24px;
+  fill: var(--subtitle-color);
+  color: var(--subtitle-color);
+  left: 30px;
+  z-index: 0;
+  /* scale: 0.9; */
+  transition: var(--animation-speed);
+  pointer-events: none;
+}
+
+.item:hover svg {
+  fill: var(--fg-color);
+  scale: 1.2;
+}
+
+/* ———————————————————————————————————— MODAL ———————————————————————————————————— */
+
+.modal {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--btn-bg-hover);
+  padding: 30px;
+  color: var(--fg-color);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  /* width: 90%; */
+  position: relative;
+  z-index: 100;
+  /* font-size: 1em; */
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  font-size: 1.8rem;
+  color: var(--fg-color);
+  cursor: pointer;
+  user-select: none;
+  /* background-color: var(--fg-color); */
+  padding-inline: 10px;
+  border-bottom-left-radius: 14px;
+}
+
+.close-btn:hover {
+  color: var(--subtitle-color);
+}
+
+.modal-show {
+  opacity: 1;
+  transition: var(--animation-speed) ease;
+  pointer-events: all;
+}
+
+.modal-close {
+  opacity: 0;
+  transition: var(--animation-speed) ease;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————————— */
+
+footer {
+  text-align: center;
+  position: relative;
+  /* background-color: red; */
+}
+
+a.emailLink {
+  color: var(--subtitle-color);
+  transition: 100ms;
+  z-index: 0;
+}
+
+a.emailLink:hover {
+  color: var(--fg-color);
+  transition: 100ms;
+}
+
+.email-string {
+  position: absolute;
+  left: -36px;
+  bottom: -22px;
+  opacity: 0;
+  font-size: 0.8em;
+  scale: 0.98;
+  transition: var(--animation-speed);
+  /* color: red; */
+  /* background-color: red; */
+}
+
+.email-string.show {
+  opacity: 0.8;
+  scale: 1;
+  transition: var(--animation-speed);
+}
+
+/* —————————————————————————————————— INTRO ANIMATION —————————————————————————————————— */
+
+.blur-in {
+  animation: blur-in 0.8s cubic-bezier(0.250, 1.000, 0.3, 1) 0s both;
+}
+
+@keyframes blur-in {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
