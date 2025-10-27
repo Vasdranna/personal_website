@@ -266,3 +266,9 @@ a.emailLink:hover {
     opacity: 1;
   }
 }
+
+.link:hover {
+  text-decoration: dotted underline 1px var(--fg-color);
+  text-underline-offset: 4px;
+  transition: var(--animation-speed);
+}
